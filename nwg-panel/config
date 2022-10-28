@@ -1,0 +1,366 @@
+[
+  {
+    "name": "statusbar",
+    "output": "eDP-1",
+    "layer": "overlay",
+    "position": "top",
+    "controls": "right",
+    "width": "auto",
+    "height": 30,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "padding-horizontal": 0,
+    "padding-vertical": 0,
+    "spacing": 0,
+    "items-padding": 0,
+    "icons": "light",
+    "css-name": "panel-top",
+    "modules-left": [
+      "button-launcher",
+      "executor-cpuav",
+      "executor-cpubar",
+      "executor-temp"
+    ],
+    "modules-center": [
+      "playerctl",
+      "clock"
+    ],
+    "modules-right": [
+      "openweather",
+      "tray",
+      "executor-memory"
+    ],
+    "controls-settings": {
+      "components": [
+        "brightness",
+        "volume",
+        "battery"
+      ],
+      "commands": {
+        "net": "",
+        "bluetooth": "",
+        "battery": ""
+      },
+      "show-values": false,
+      "interval": 1,
+      "icon-size": 18,
+      "hover-opens": false,
+      "leave-closes": true,
+      "css-name": "controls-window",
+      "net-interface": "wlp5s0f3u2",
+      "custom-items": [
+        {
+          "name": "vol mixer",
+          "icon": "gnome-volume-control",
+          "cmd": "pavucontrol"
+        },
+        {
+          "name": "eq",
+          "icon": "cs-sound",
+          "cmd": "qpaeq"
+        },
+        {
+          "name": "power",
+          "icon": "cs-power",
+          "cmd": "wlogout"
+        }
+      ],
+      "menu": {
+        "name": "settings",
+        "icon": "gnome-settings",
+        "items": [
+          {
+            "name": "wayfire settings",
+            "cmd": "wcm"
+          },
+          {
+            "name": "statusbar settings",
+            "cmd": "nwg-panel-config"
+          },
+          {
+            "name": "gtk settings",
+            "cmd": "nwg-look"
+          }
+        ]
+      },
+      "output-switcher": true,
+      "backlight-controller": "brightnessctl",
+      "backlight-device": "",
+      "window-width": 0,
+      "window-margin-horizontal": 0,
+      "window-margin-vertical": 0,
+      "root-css-name": "controls-overview",
+      "angle": 0.0
+    },
+    "sway-taskbar": {
+      "workspace-menu": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "name-max-len": 20,
+      "image-size": 16,
+      "workspaces-spacing": 0,
+      "task-padding": 0,
+      "show-app-icon": true,
+      "show-app-name": true,
+      "show-layout": true,
+      "workspace-buttons": false,
+      "all-workspaces": true,
+      "mark-autotiling": true,
+      "mark-xwayland": true,
+      "all-outputs": false,
+      "angle": 0.0
+    },
+    "sway-workspaces": {
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "clock": {
+      "format": "%H:%M:%S",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "gnome-clocks",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "clock",
+      "interval": 1,
+      "tooltip-date-format": true,
+      "root-css-name": "root-clock",
+      "angle": 0.0,
+      "calendar-path": "",
+      "calendar-css-name": "calendar-window",
+      "calendar-placement": "top",
+      "calendar-margin-horizontal": 0,
+      "calendar-margin-vertical": 0,
+      "calendar-icon-size": 24,
+      "calendar-interval": 60,
+      "calendar-on": true
+    },
+    "playerctl": {
+      "buttons-position": "left",
+      "icon-size": 16,
+      "chars": 36,
+      "button-css-name": "",
+      "label-css-name": "",
+      "interval": 1,
+      "angle": 0.0,
+      "scroll": true,
+      "show-cover": true,
+      "cover-size": 24
+    },
+    "menu-start": "off",
+    "exclusive-zone": true,
+    "scratchpad": {},
+    "openweather": {
+      "module-id": "1661406507.2946293",
+      "appid": "d283656c6425defa030873971cdb8f3a",
+      "weatherbit-api-key": "278a8b6b9e8a41dc9fa88b29cdc3f526",
+      "lat": 60.0563,
+      "long": 30.4274,
+      "lang": "ru",
+      "units": "metric",
+      "interval": 1800,
+      "loc-name": "",
+      "weather-icons": "color",
+      "on-right-click": "gnome-weather",
+      "on-middle-click": "",
+      "on-scroll": "",
+      "icon-placement": "start",
+      "icon-size": 24,
+      "css-name": "weather",
+      "show-name": false,
+      "angle": 0.0,
+      "ow-popup-icons": "light",
+      "popup-header-icon-size": 48,
+      "popup-icon-size": 20,
+      "popup-text-size": "large",
+      "popup-css-name": "weather-forecast",
+      "popup-placement": "right",
+      "popup-margin-horizontal": 0,
+      "popup-margin-top": 0,
+      "popup-margin-bottom": 0,
+      "show-humidity": true,
+      "show-wind": true,
+      "show-pressure": true,
+      "show-cloudiness": true,
+      "show-visibility": true,
+      "show-pop": true,
+      "show-volume": true
+    },
+    "brightness-slider": {
+      "show-values": true,
+      "icon-size": 16,
+      "interval": 10,
+      "hover-opens": false,
+      "leave-closes": false,
+      "root-css-name": "brightness-module",
+      "css-name": "brightness-popup",
+      "angle": 0.0,
+      "icon-placement": "start",
+      "backlight-device": "",
+      "backlight-controller": "brightnessctl",
+      "slider-orientation": "horizontal",
+      "slider-inverted": false,
+      "popup-icon-placement": "start",
+      "popup-horizontal-alignment": "right",
+      "popup-vertical-alignment": "top",
+      "popup-width": 256,
+      "popup-height": 64,
+      "popup-horizontal-margin": 0,
+      "popup-vertical-margin": 0,
+      "step-size": 1
+    },
+    "dwl-tags": {
+      "tag-names": "1 2 3 4 5 6 7 8 9",
+      "title-limit": 55,
+      "angle": 0.0
+    },
+    "tray": {
+      "icon-size": 22,
+      "root-css-name": "tray",
+      "inner-css-name": "inner-tray",
+      "smooth-scrolling-threshold": 1
+    },
+    "executor-cpuav": {
+      "script": "gopsuinfo -i a",
+      "interval": 1,
+      "tooltip-text": "CPU average load",
+      "on-left-click": "gnome-system-monitor -r",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "icon-size": 18,
+      "icon-placement": "left",
+      "root-css-name": "",
+      "angle": 0.0
+    },
+    "executor-cpubar": {
+      "script": "gopsuinfo -c g",
+      "interval": 1,
+      "tooltip-text": "",
+      "on-left-click": "gnome-system-monitor -r",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "icon-size": 18,
+      "icon-placement": "left",
+      "root-css-name": "",
+      "angle": 0.0
+    },
+    "executor-temp": {
+      "script": "gopsuinfo -i t",
+      "interval": 1,
+      "tooltip-text": "",
+      "on-left-click": "psensor",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "icon-size": 18,
+      "icon-placement": "right",
+      "root-css-name": "",
+      "angle": 0.0
+    },
+    "executor-memory": {
+      "script": "gopsuinfo -i m",
+      "interval": 1,
+      "tooltip-text": "",
+      "on-left-click": "gnome-system-monitor -p",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "icon-size": 18,
+      "icon-placement": "left",
+      "root-css-name": "",
+      "angle": 0.0
+    },
+    "executor-drives": {
+      "script": "gopsuinfo -i n",
+      "interval": 15,
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "icon-size": 16,
+      "icon-placement": "left"
+    },
+    "executor-updates": {
+      "script": "sway-check-updates",
+      "interval": 900,
+      "icon-size": 16,
+      "on-left-click": "kitty -e up",
+      "tooltip-text": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "root-css-name": "",
+      "icon-placement": "left",
+      "angle": 0.0
+    },
+    "menu-start-settings": {
+      "cmd-lock": "wayland-logout",
+      "cmd-logout": "wayland-logout",
+      "cmd-restart": "systemctl reboot",
+      "cmd-shutdown": "systemctl -i poweroff",
+      "autohide": true,
+      "file-manager": "nemo",
+      "height": 0,
+      "icon-size-large": 48,
+      "icon-size-small": 24,
+      "icon-size-button": 24,
+      "margin-bottom": 0,
+      "margin-left": 0,
+      "margin-right": 0,
+      "margin-top": 0,
+      "padding": 2,
+      "terminal": "kitty",
+      "width": 0
+    },
+    "homogeneous": true,
+    "button-unnamed_1": {
+      "command": "nwggrid -client -p -f  -o 0.5",
+      "icon": "distributor-logo-archbang",
+      "label": "arch",
+      "label-position": "right",
+      "tooltip": "",
+      "css-name": "",
+      "icon-size": 24
+    },
+    "button-launcher": {
+      "command": "nwggrid -client -p -f  -o 0.5",
+      "icon": "distributor-logo-archlinux",
+      "label": "",
+      "label-position": "right",
+      "tooltip": "",
+      "css-name": "",
+      "icon-size": 24
+    }
+  }
+]
