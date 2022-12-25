@@ -6,7 +6,7 @@
     "position": "top",
     "controls": "right",
     "width": "auto",
-    "height": 30,
+    "height": 25,
     "margin-top": 0,
     "margin-bottom": 0,
     "padding-horizontal": 0,
@@ -16,19 +16,16 @@
     "icons": "light",
     "css-name": "panel-top",
     "modules-left": [
-      "button-launcher",
-      "executor-cpuav",
+      "executor-temp",
       "executor-cpubar",
-      "executor-temp"
+      "executor-memory"
     ],
     "modules-center": [
-      "playerctl",
-      "clock"
+      "clock",
+      "openweather"
     ],
     "modules-right": [
-      "openweather",
-      "tray",
-      "executor-memory"
+      "tray"
     ],
     "controls-settings": {
       "components": [
@@ -84,13 +81,14 @@
         ]
       },
       "output-switcher": true,
-      "backlight-controller": "brightnessctl",
+      "backlight-controller": "light",
       "backlight-device": "",
       "window-width": 0,
       "window-margin-horizontal": 0,
       "window-margin-vertical": 0,
       "root-css-name": "controls-overview",
-      "angle": 0.0
+      "angle": 0.0,
+      "click-closes": false
     },
     "sway-taskbar": {
       "workspace-menu": [
@@ -231,7 +229,7 @@
       "angle": 0.0
     },
     "tray": {
-      "icon-size": 22,
+      "icon-size": 20,
       "root-css-name": "tray",
       "inner-css-name": "inner-tray",
       "smooth-scrolling-threshold": 1
@@ -277,9 +275,11 @@
       "on-scroll-down": "",
       "css-name": "",
       "icon-size": 18,
-      "icon-placement": "right",
+      "icon-placement": "left",
       "root-css-name": "",
-      "angle": 0.0
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
     },
     "executor-memory": {
       "script": "gopsuinfo -i m",
@@ -292,9 +292,11 @@
       "on-scroll-down": "",
       "css-name": "",
       "icon-size": 18,
-      "icon-placement": "left",
+      "icon-placement": "right",
       "root-css-name": "",
-      "angle": 0.0
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
     },
     "executor-drives": {
       "script": "gopsuinfo -i n",
@@ -361,6 +363,20 @@
       "tooltip": "",
       "css-name": "",
       "icon-size": 24
+    },
+    "swaync": {
+      "tooltip-text": "Notifications",
+      "on-left-click": "swaync-client -t",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "root-executor",
+      "css-name": "executor",
+      "icon-placement": "left",
+      "icon-size": 20,
+      "interval": 1,
+      "always-show-icon": true
     }
   }
 ]
