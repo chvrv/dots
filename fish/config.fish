@@ -94,14 +94,10 @@ alias l.="exa -a | egrep '^\.'"                                     # show only 
 
 
 #common
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-alias tarnow="tar -acf "
-alias untar="tar -zxvf "
-alias wget="wget -c "
+alias rmdb="sudo rm /var/lib/pacman/db.lck"
 alias rmpkg="sudo pacman -Rdd"
 alias psmem="ps auxf | sort -nr -k 4"
 alias psmem10="ps auxf | sort -nr -k 4 | head -10"
-alias upd="/usr/bin/update"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -117,13 +113,12 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed pac
 
 #aliases - package management
 alias in="sudo pacman -S"
-alias inz="pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo pacman -S"
 alias inow="sudo pacman -S --overwrite \*"
 alias inlocal="sudo pacman -U"
 alias inowlocal="sudo pacman -U --overwrite \*"
 alias up="sudo pacman -Syu"
-alias un="sudo pamac remove"
-alias unz="pacman -Qq | fzf --multi --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns"
+alias upd="sudo pacman -Suu"
+alias un="sudo pacman -Rns"
 alias unf="sudo pacman -Rdd"
 alias unorph="sudo pacman -Rns (pacman -Qtdq)" #remove orphaned packages
 alias unghost="sudo pacman -Rsu (pacman -Qqd)" #remove ghost packages
@@ -133,7 +128,7 @@ alias listrecentpkg="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -20
 #aliases - systemd
 alias srv="sudo systemctl"
 alias usersrv="systemctl --user"
-alias srvlog="journalctl -xeu"
+alias log="journalctl -xeu"
 
 #yt-dlp
 alias ytstream="yt-dlp --cookies-from-browser firefox --proxy socks5://127.0.0.1:1080 -o - (wl-paste) | mpv -"
@@ -141,10 +136,11 @@ alias ytdlmp4="yt-dlp --cookies-from-browser firefox --proxy socks5://127.0.0.1:
 alias ytdl="yt-dlp --cookies-from-browser firefox --proxy socks5://127.0.0.1:1080 -o '~/Videos/%(title)s.%(ext)s' (wl-paste)"
 
 #misc
-alias bak="ipfs add --raw-leaves" #backup to ipfs with deduplication
+alias mtp="gio mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gio mount "$2)}'" # mount smartphone
+alias keycode="wev"
 
-
-#autorun
+#greeting
 if status --is-interactive
+   chafa  Pictures/nyarch.png
    fastfetch
 end

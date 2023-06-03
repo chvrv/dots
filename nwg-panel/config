@@ -1,12 +1,12 @@
 [
   {
     "name": "statusbar",
-    "output": "eDP-1",
+    "output": "All",
     "layer": "overlay",
     "position": "top",
     "controls": "right",
     "width": "auto",
-    "height": 25,
+    "height": 30,
     "margin-top": 0,
     "margin-bottom": 0,
     "padding-horizontal": 0,
@@ -16,6 +16,7 @@
     "icons": "light",
     "css-name": "panel-top",
     "modules-left": [
+      "button-launcher",
       "executor-temp",
       "executor-cpubar",
       "executor-memory"
@@ -168,9 +169,9 @@
       "module-id": "1661406507.2946293",
       "appid": "d283656c6425defa030873971cdb8f3a",
       "weatherbit-api-key": "278a8b6b9e8a41dc9fa88b29cdc3f526",
-      "lat": 60.0563,
-      "long": 30.4274,
-      "lang": "ru",
+      "lat": 39.89,
+      "long": 116.371,
+      "lang": "en",
       "units": "metric",
       "interval": 1800,
       "loc-name": "",
@@ -186,9 +187,9 @@
       "ow-popup-icons": "light",
       "popup-header-icon-size": 48,
       "popup-icon-size": 20,
-      "popup-text-size": "large",
+      "popup-text-size": "x-large",
       "popup-css-name": "weather-forecast",
-      "popup-placement": "right",
+      "popup-placement": "center",
       "popup-margin-horizontal": 0,
       "popup-margin-top": 0,
       "popup-margin-bottom": 0,
@@ -211,7 +212,7 @@
       "angle": 0.0,
       "icon-placement": "start",
       "backlight-device": "",
-      "backlight-controller": "brightnessctl",
+      "backlight-controller": "ddcutil",
       "slider-orientation": "horizontal",
       "slider-inverted": false,
       "popup-icon-placement": "start",
@@ -356,7 +357,7 @@
       "icon-size": 24
     },
     "button-launcher": {
-      "command": "nwggrid -client -p -f  -o 0.5",
+      "command": "nwg-drawer -fm nautilus -ovl",
       "icon": "distributor-logo-archlinux",
       "label": "",
       "label-position": "right",
@@ -377,6 +378,8 @@
       "icon-size": 20,
       "interval": 1,
       "always-show-icon": true
-    }
+    },
+    "hyprland-taskbar": {},
+    "hyprland-workspaces": {}
   }
 ]
